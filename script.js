@@ -9,5 +9,7 @@ function toggleMenu() {
 }
 
 window.addEventListener('resize', function(event) {
-  document.getElementById('expand-contract').style.marginTop = '0px';
+  if (window.innerWidth > 920) {
+    document.getElementById('expand-contract').style.marginTop = '0px';
+  }
 });
