@@ -455,6 +455,8 @@ form {
   font-size: 24px;
   font-weight: 600;
   display: inline-block;
+  vertical-align: top;
+  padding-top: 10px;
 }
 
 .price .amount {
