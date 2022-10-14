@@ -661,6 +661,18 @@ footer hr {
       padding: 0;
       width: 100%;
     }
+
+    .section .right {
+      float: none;
+      text-align: center;
+      width: 100%;
+    }
+
+    .section .left {
+      float: none;
+      text-align: center;
+      width: 100%;
+    }
   }
 
   @media(max-width: 350px) {
