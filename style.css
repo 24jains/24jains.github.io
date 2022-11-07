@@ -415,6 +415,10 @@ form {
   width: 60%;
 }
 
+.price-container-container {
+  display: inline-block;
+}
+
 .price-container {
   padding: 0 1% 0 1%;
   width: 31.33333%;
