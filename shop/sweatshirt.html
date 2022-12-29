@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="https://media.githubusercontent.com/media/24jains/24jains.github.io/main/logos/triangles_icon_circle.png">
+    <title>Sid's Studios | Shop</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="sidstudios">
+    <meta property="og:title" content="Sid's Studios | Pricing">
+    <meta property="og:image" content="https://media.githubusercontent.com/media/24jains/24jains.github.io/main/logos/sidstudios.png">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/e04d25e1ed.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../jquery.sticky-kit.js"></script>
+  </head>
+  <body>
+
+    <div class="navbar">
+      <div class="container">
+        <span class="dropdown-button" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </span>
+        <h1><a href="../index.html" class="highlight">SID'S STUDIOS<img src="https://media.githubusercontent.com/media/24jains/24jains.github.io/main/logos/triangles_white.png"></a></h1>
+        <div id="expand-container">
+          <div id="expand-contract" style="margin-top: 0px;">
+            <ul>
+              <li><a class="underline-animation highlight" href="../index.html">Home</a></li>
+              <li><a class="underline-animation highlight" href="../anvaysanimations.html">Anvay's Animations</a></li>
+              <li><a class="underline-animation highlight" href="../pricing.html">Pricing</a></li>
+              <li><a class="underline highlight" href="../shop.html">Shop</a></li>
+              <li><a class="underline-animation highlight" href="../aboutus.html">About Us</a></li>
+              <li><a class="underline-animation highlight" href="../gallery.html">Gallery</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="column-shop-main-container">
+        <article class="panel main">
+          <span class="ribbon"></span>
+          <div class="shop-wrapper">
+            <div class="shop-container">
+              <a target="_blank" href="https://media.githubusercontent.com/media/24jains/24jains.github.io/main/images/IMG_1042.JPG">
+                <img class="shop-image" src="https://media.githubusercontent.com/media/24jains/24jains.github.io/main/images/IMG_1042.JPG">
+              </a>
+            </div>
+
+            <div class="shop-container">
+              <h2 id="item">Sid's Studios Sweatshirt</h2>
+              <p class="description">Unisex Hoodie</p>
+              <p class="description">2 Sizes</p>
+              <div class="dollar">$</div>
+              <div class="price">20</div>
+              <div class="price-strikethrough">$25</div>
+              <div class="sale highlight">20% OFF</div>
+            </div>
+          </div>
+        </article>
+        <article class="panel main">
+          <h2>Rebate Program</h2>
+          <hr>
+          <ul class="rebate-list">
+            <li>Earn money while wearing apparell.</li>
+            <li>Earn back $1 every time you are spotted wearing Sid's Studios apparell.</li>
+            <li>Max rebate of $4 on each item.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="column-shop-side-container">
+        <article class="panel main sidebar">
+          <h2>Pre-Order Form</h2>
+          <hr>
+          <form class="form" id="order-info">
+            <div class="input">
+              <input type="text" name="name" id="name" required>
+              <label for="name" class="label-name">
+                <span class="content-name">Full Name</span>
+              </label>
+            </div>
+            <div class="input">
+              <input type="text" name="email" id="email" required>
+              <label for="name" class="label-name">
+                <span class="content-name">Email</span>
+              </label>
+            </div>
+            <div class="input">
+              <input type="text" name="phone" id="phone" required>
+              <label for="phone" class="label-name">
+                <span class="content-name">Phone Number</span>
+              </label>
+            </div>
+            <h3>Size</h3>
+            <div class="selector">
+              <input type="radio" name="size" id="small" required>
+              <label for="small">S</label>
+              <input type="radio" name="size" id="medium" required>
+              <label for="medium">M</label>
+            </div>
+            <h3>Payment</h3>
+            <div class="radio">
+              <p>
+                <input type="radio" name="payment" id="venmo" rqeuired>
+                <label for="venmo"><img src="https://media.githubusercontent.com/media/24jains/24jains.github.io/main/images/Venmo_Monogram.svg" width="15px" height="15px"> Venmo: @sidstudios11</label>
+              </p>
+              <p>
+                <input type="radio" name="payment" id="paypal" required>
+                <label for="paypal"><i class="fab fa-paypal"></i> PayPal: @sidstudios11</label>
+              </p>
+              <p>
+                <input type="radio" name="payment" id="cash" required>
+                <label for="cash"><i class="fas fa-money-bill"></i> Cash: Contact us below</label>
+              </p>
+              <p class="asterisk">*Payment must be made within 24 hours or pre-order may be cancelled.</p>
+            </div>
+            <input class="button black" type="submit" value="Place Order">
+          </form>
+          <p id="order-confirmation">
+            <i class="fas fa-check"></i> Your order has been received!
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div class="footer-container">
+      <footer>
+        <div class="container">
+          <h3 class="socials-text highlight">SOCIAL MEDIA</h3>
+          <hr>
+          <div class="socials-container">
+            <div class="socials">
+              <form action="https://youtube.com/channel/UCqw610nvi5rSvpCH_oYgyEg" target="_blank">
+                <button class="social"><i class="fab fa-youtube"></i></button>
+              </form>
+            </div>
+            <div class="socials">
+              <form action="https://www.instagram.com/sidstudios11" target="_blank">
+                <button class="social"><i class="fab fa-instagram"></i></button>
+              </form>
+            </div>
+            <div class="socials">
+              <form action="http://www.tiktok.com/@sidstudios" target="_blank">
+                <button class="social"><i class="fab fa-tiktok"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <footer>
+        <div class="container">
+          <p class="highlight">Copyright © 2022 Sid's Studios. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="../script.js"></script>
+
+  </body>
+</html>

@@ -1,4 +1,10 @@
 
+$(document).ready(function() {
+  $(".sidebar").stick_in_parent({
+    offset_top: 60
+  });
+});
+
 function toggleMenu() {
   const menu = document.getElementById('expand-contract');
   if (menu.style.marginTop == '0px') {
@@ -20,3 +26,61 @@ window.addEventListener('resize', function(event) {
     document.getElementById('expand-contract').style.marginTop = '0px';
   }
 });
+
+const firebaseConfig = {
+  apiKey: "AIzaSyA7rFtVWt4TsC-1ZDyEAvt5tCTMlNUcXzU",
+  authDomain: "sidstudioshop.firebaseapp.com",
+  databaseURL: "https://sidstudioshop-default-rtdb.firebaseio.com",
+  projectId: "sidstudioshop",
+  storageBucket: "sidstudioshop.appspot.com",
+  messagingSenderId: "313779483792",
+  appId: "1:313779483792:web:a80db4c22cc27b55b91415",
+  measurementId: "G-RRZE1ER1KF"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+var messagesRef = firebase.database().ref('shop');
+
+document.getElementById('order-info').addEventListener('submit', submitForm);
+
+function submitForm(e) {
+  e.preventDefault();
+
+  var item = document.getElementById('item').innerHTML;
+  var name = getInputVal('name');
+  var email = getInputVal('email');
+  var phone = getInputVal('phone');
+  var size = getRadioValue('size');
+  var payment = getRadioValue('payment');
+
+  saveData(item, name, email, phone, size, payment);
+
+  document.getElementById('order-info').reset();
+  document.getElementById('order-confirmation').style.display = "block";
+}
+
+function getInputVal(id) {
+  return document.getElementById(id).value;
+}
+
+function getRadioValue(name) {
+  var element = document.getElementsByName(name);
+  for (i = 0; i < element.length; i++) {
+    if (element[i].checked) {
+      return element[i].id;
+    }
+  }
+}
+
+function saveData(item, name, email, phone, size, payment) {
+  var newMessageRef = messagesRef.push();
+    newMessageRef.set({
+      item: item,
+      name: name,
+      email: email,
+      phone: phone,
+      size: size,
+      payment: payment
+  });
+}
