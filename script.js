@@ -40,8 +40,6 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-var messagesRef = firebase.database().ref('shop');
-
 document.getElementById('order-info').addEventListener('submit', submitForm);
 
 function submitForm(e) {
@@ -74,13 +72,14 @@ function getRadioValue(name) {
 }
 
 function saveData(item, name, email, phone, size, payment) {
-  var newMessageRef = messagesRef.push();
-    newMessageRef.set({
-      item: item,
-      name: name,
-      email: email,
-      phone: phone,
-      size: size,
-      payment: payment
-  });
+  var messagesRef = firebase.database().ref("Shop");
+  var data = {
+    item: item,
+    name: name,
+    email: email,
+    phone: phone,
+    size: size,
+    payment: payment
+  }
+  messagesRef.push(data);
 }
