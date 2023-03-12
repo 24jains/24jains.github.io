@@ -710,7 +710,7 @@ form {
 
 .input input:focus + .label-name .content-name,
 .input input:valid + .label-name .content-name {
-  transform: translateY(-130%);
+  transform: translateY(-120%);
   font-size: 14px;
   left: 0px;
   color: #000000;
